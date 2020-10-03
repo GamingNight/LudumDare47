@@ -6,11 +6,13 @@ public class NextLevelTrigger : MonoBehaviour
 {
 
     public void OnTriggerEnter2D(Collider2D collision) {
-        Debug.Log("Collide with " + collision.gameObject.name);
         if(collision.gameObject.tag == "Player") {
-            GameObject nextLevel = transform.parent.GetComponent<LevelData>().nextLevel;
+            GameObject currentLevel = GameController.GetInstance().currentLevel;
+            GameObject nextLevel = currentLevel.GetComponent<LevelData>().nextLevel;
+            //Switch levels
             nextLevel.SetActive(true);
-            transform.parent.gameObject.SetActive(false);
+            currentLevel.SetActive(false);
+            //Shift player to the left
             Transform playerTransform = GameController.GetInstance().player.transform;
             playerTransform.position = new Vector3(GameController.GetInstance().playerLeftestPosition, playerTransform.position.y, playerTransform.position.z);
         }
