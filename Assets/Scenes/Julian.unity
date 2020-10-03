@@ -560,7 +560,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737837833}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.14, z: 0}
+  m_LocalPosition: {x: 0, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4546327387159182165}
@@ -1087,6 +1087,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogs:
   - {fileID: 4900000, guid: 4dcc0b64d763560458c44c7177c86be7, type: 3}
+  - {fileID: 4900000, guid: 1c2d127ddeb161548b7b63c1b0fcafdd, type: 3}
 --- !u!1001 &4546327387365760758
 PrefabInstance:
   m_ObjectHideFlags: 0
