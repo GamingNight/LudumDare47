@@ -17,7 +17,8 @@ public class GameController : MonoBehaviour
     public float playerRightestPosition = 18.7f;
     public GameObject player;
     public GameObject currentLevel;
-    public Image switchLevelFadePanel;
+    public Image switchLevelFadeImage;
+    public GameObject dialogPanel;
 
     private void Awake() {
         if (INSTANCE == null) {
@@ -59,7 +60,7 @@ public class GameController : MonoBehaviour
         float step = 0.05f;
         while (time < dur) {
             float a = Mathf.Lerp(0, 1, time / dur);
-            switchLevelFadePanel.color = new Color(0, 0, 0, a);
+            switchLevelFadeImage.color = new Color(0, 0, 0, a);
             yield return new WaitForSeconds(step);
             time += step;
         }
@@ -67,10 +68,21 @@ public class GameController : MonoBehaviour
         time = 0;
         while (time < dur) {
             float a = Mathf.Lerp(1, 0, time / dur);
-            switchLevelFadePanel.color = new Color(0, 0, 0, a);
+            switchLevelFadeImage.color = new Color(0, 0, 0, a);
             yield return new WaitForSeconds(step);
             time += step;
         }
+        player.GetComponent<PlayerController>().UnlockController();
+    }
+
+    public Text LaunchDialogBox(TriggerDialog dialogLauncher) {
+        dialogPanel.SetActive(true);
+        player.GetComponent<PlayerController>().LockController();
+        return dialogPanel.GetComponentInChildren<Text>();
+    }
+
+    public void QuitDialogBox() {
+        dialogPanel.SetActive(false);
         player.GetComponent<PlayerController>().UnlockController();
     }
 }
