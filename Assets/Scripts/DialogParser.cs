@@ -8,22 +8,28 @@ public class DialogParser : MonoBehaviour
 
     private List<List<string>> parsedDialogs;
 
-    void Start()
-    {
+    void Start() {
+        parsedDialogs = new List<List<string>>();
         for (int i = 0; i < dialogs.Length; i++) {
             string dialogTxt = dialogs[i].text;
             string[] lines = dialogTxt.Split(new char[] { '~' }, System.StringSplitOptions.RemoveEmptyEntries);
+            List<string> d = new List<string>();
+            parsedDialogs.Add(d);
             for (int j = 0; j < lines.Length; j++) {
                 string line = lines[j];
-                if(line.Trim() != "") {
-
+                if (line.Trim(' ', '\r', '\n') != "") {
+                    parsedDialogs[i].Add(line.Trim(' ', '\r', '\n'));
                 }
             }
         }
     }
 
-    public string GetDialogLine(int dialogId, int lineId) {
+    public List<string> GetDialog(int dialogId) {
 
-        return "";
+        return parsedDialogs[dialogId];
+    }
+
+    public int GetDialogCount() {
+        return parsedDialogs.Count;
     }
 }
