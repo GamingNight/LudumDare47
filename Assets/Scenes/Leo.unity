@@ -123,12 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!20 &1428372917 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 964124129623934298, guid: 0bd93fbad561b974292975cd3f00968f, type: 3}
-  m_PrefabInstance: {fileID: 1504966545}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1504966545
+--- !u!1001 &232645108
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -139,33 +134,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 964124129623934298, guid: 0bd93fbad561b974292975cd3f00968f, type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 964124129623934298, guid: 0bd93fbad561b974292975cd3f00968f, type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 964124129623934298, guid: 0bd93fbad561b974292975cd3f00968f, type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 964124129623934300, guid: 0bd93fbad561b974292975cd3f00968f, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 2085353308}
     - target: {fileID: 964124129623934301, guid: 0bd93fbad561b974292975cd3f00968f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.53
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 964124129623934301, guid: 0bd93fbad561b974292975cd3f00968f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.81
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 964124129623934301, guid: 0bd93fbad561b974292975cd3f00968f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.32
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 964124129623934301, guid: 0bd93fbad561b974292975cd3f00968f, type: 3}
       propertyPath: m_LocalRotation.x
@@ -201,6 +180,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bd93fbad561b974292975cd3f00968f, type: 3}
+--- !u!20 &232645109 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 964124129623934298, guid: 0bd93fbad561b974292975cd3f00968f, type: 3}
+  m_PrefabInstance: {fileID: 232645108}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2085353308
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,7 +291,7 @@ PrefabInstance:
     - target: {fileID: 7470903161830541651, guid: a3774044389accf40806d1ddfca5a801, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 1428372917}
+      objectReference: {fileID: 232645109}
     - target: {fileID: 7470903162343275964, guid: a3774044389accf40806d1ddfca5a801, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
