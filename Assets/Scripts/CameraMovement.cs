@@ -5,8 +5,14 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     public Vector2 boundaries;
-    public GameObject player;
-    
+
+    private GameObject player;
+
+    void Start()
+    {
+        player = GameController.GetInstance().player;
+    }
+
     void Update()
     {
         if(player.transform.position.x > boundaries.x && player.transform.position.x < boundaries.y) {
