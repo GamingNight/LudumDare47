@@ -285,7 +285,7 @@ PrefabInstance:
     - target: {fileID: 1500369489, guid: a3774044389accf40806d1ddfca5a801, type: 3}
       propertyPath: nextLevel
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1500369488}
     - target: {fileID: 1500369489, guid: a3774044389accf40806d1ddfca5a801, type: 3}
       propertyPath: previousLevel
       value: 
@@ -394,6 +394,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1500369489, guid: a3774044389accf40806d1ddfca5a801, type: 3}
       propertyPath: nextLevel
+      value: 
+      objectReference: {fileID: 1095306412}
+    - target: {fileID: 1500369489, guid: a3774044389accf40806d1ddfca5a801, type: 3}
+      propertyPath: previousLevel
       value: 
       objectReference: {fileID: 1095306412}
     - target: {fileID: 7470903161830541651, guid: a3774044389accf40806d1ddfca5a801, type: 3}
