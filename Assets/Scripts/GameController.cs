@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour
     public GameObject currentLevel;
     public Image switchLevelFadeImage;
     public GameObject dialogPanel;
+    public float dialogSpeed = 2;
 
     private void Awake() {
         if (INSTANCE == null) {
