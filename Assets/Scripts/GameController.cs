@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
     public float playerLeftestPosition = -15.8f;
     public float playerRightestPosition = 18.7f;
     public GameObject player;
+    public GameObject currentLevel;
 
     private void Awake() {
         if (INSTANCE == null) {
@@ -21,5 +22,9 @@ public class GameController : MonoBehaviour
         } else {
             Destroy(gameObject);
         }
+    }
+
+    public void TriggerNextLevel() {
+
     }
 }

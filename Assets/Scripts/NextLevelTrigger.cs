@@ -6,6 +6,7 @@ public class NextLevelTrigger : MonoBehaviour
 {
 
     public void OnTriggerEnter2D(Collider2D collision) {
+        Debug.Log("Collide with " + collision.gameObject.name);
         if(collision.gameObject.tag == "Player") {
             GameObject nextLevel = transform.parent.GetComponent<LevelData>().nextLevel;
             nextLevel.SetActive(true);
