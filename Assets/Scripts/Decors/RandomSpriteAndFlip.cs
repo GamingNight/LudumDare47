@@ -1,11 +1,13 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class Wheat : MonoBehaviour
+public class RandomSpriteAndFlip : MonoBehaviour
 {
 
 
     private SpriteRenderer spriteR;
-    public Sprite[] wheatSprites;
+    public Sprite[] allSprites;
     private float flipRandom;
 
 
@@ -13,10 +15,10 @@ public class Wheat : MonoBehaviour
     {
 
         spriteR = gameObject.GetComponent<SpriteRenderer>();
-        spriteR.sprite = wheatSprites[Random.Range(0, wheatSprites.Length)];
+        spriteR.sprite = allSprites[Random.Range(0, allSprites.Length)];
 
         flipRandom = Random.Range(0, 2);
-        if(flipRandom >= 1)
+        if (flipRandom >= 1)
         {
             spriteR.flipX = false;
         }
@@ -28,10 +30,4 @@ public class Wheat : MonoBehaviour
     }
 
 
-    void Update()
-    {
-        
-
-
-    }
 }
