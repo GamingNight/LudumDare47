@@ -61,7 +61,7 @@ public class GameController : MonoBehaviour
         float step = 0.05f;
         while (time < dur) {
             float a = Mathf.Lerp(0, 1, time / dur);
-            switchLevelFadeImage.color = new Color(0, 0, 0, a);
+            switchLevelFadeImage.color = new Color(1, 1, 1, a);
             yield return new WaitForSeconds(step);
             time += step;
         }
@@ -69,7 +69,7 @@ public class GameController : MonoBehaviour
         time = 0;
         while (time < dur) {
             float a = Mathf.Lerp(1, 0, time / dur);
-            switchLevelFadeImage.color = new Color(0, 0, 0, a);
+            switchLevelFadeImage.color = new Color(1, 1, 1, a);
             yield return new WaitForSeconds(step);
             time += step;
         }
