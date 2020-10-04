@@ -4,29 +4,66 @@
 public class Flute : MonoBehaviour
 {
     private AudioFade audioFade;
+    private AudioFade secondAudioFade;
     private float note;
+    private KeyCode lastPressedKey;
 
     void Start() {
         audioFade = GetComponent<AudioFade>();
+        foreach (Transform child in transform) {
+            if (child.GetComponent<AudioFade>() != null)
+                secondAudioFade = child.GetComponent<AudioFade>();
+        }
+        Debug.Log(secondAudioFade.gameObject.name);
         audioFade.source.priority = 0;
         note = -1f;
+        lastPressedKey = KeyCode.None;
     }
 
 
     void Update() {
 
-        if (Input.GetKeyDown("x")) note = 0;
-        if (Input.GetKeyDown("c")) note = 2;
-        if (Input.GetKeyDown("v")) note = 4;
-        if (Input.GetKeyDown("b")) note = 5;
-        if (Input.GetKeyDown("n")) note = 7;
+        KeyCode pressedKey = KeyCode.None;
+        if (Input.GetKeyDown(KeyCode.X)) {
+            note = 0;
+            pressedKey = KeyCode.X;
+        }
+        if (Input.GetKeyDown(KeyCode.C)) {
+            note = 2;
+            pressedKey = KeyCode.C;
+        }
+        if (Input.GetKeyDown(KeyCode.V)) {
+            note = 4;
+            pressedKey = KeyCode.V;
+        }
+        if (Input.GetKeyDown(KeyCode.B)) {
+            note = 5;
+            pressedKey = KeyCode.B;
+        }
+        if (Input.GetKeyDown(KeyCode.N)) {
+            note = 7;
+            pressedKey = KeyCode.N;
+        }
 
-        if (Input.GetKeyDown("x") || Input.GetKeyDown("c") || Input.GetKeyDown("v") || Input.GetKeyDown("b") || Input.GetKeyDown("n")) {
-            audioFade.pitch = Mathf.Pow(2f, (note - 4f) / 12.0f);
-            //audioFade.PlayWithFadeIn();
-            audioFade.Play();
-        } else if (Input.GetKeyUp("x") || Input.GetKeyUp("c") || Input.GetKeyUp("v") || Input.GetKeyUp("b") || Input.GetKeyUp("n")) {
-            audioFade.StopWithFadeOut();
+        if (pressedKey != KeyCode.None) {
+            if (!audioFade.isPlaying) {
+                if (secondAudioFade.isPlaying)
+                    secondAudioFade.StopWithFadeOut();
+                audioFade.pitch = Mathf.Pow(2f, (note - 4f) / 12.0f);
+                audioFade.PlayWithFadeIn();
+            } else {
+                if (audioFade.isPlaying)
+                    audioFade.StopWithFadeOut();
+                secondAudioFade.pitch = Mathf.Pow(2f, (note - 4f) / 12.0f);
+                secondAudioFade.PlayWithFadeIn();
+            }
+            lastPressedKey = pressedKey;
+        }
+        if (Input.GetKeyUp(lastPressedKey)) {
+            if (audioFade.isPlaying)
+                audioFade.StopWithFadeOut();
+            if (secondAudioFade.isPlaying)
+                secondAudioFade.StopWithFadeOut();
         }
     }
 }
