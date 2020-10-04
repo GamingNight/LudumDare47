@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,6 +24,8 @@ public class TriggerDialog : MonoBehaviour
     private float endOfLineCursorFlashSpeed;
     private float timeSinceLastCursorFlash;
 
+    private AudioSource voix;
+
     private void Start() {
         triggerHighlight = GetComponent<TriggerHighlight>();
         parser = GetComponent<DialogParser>();
@@ -37,6 +40,7 @@ public class TriggerDialog : MonoBehaviour
         waitingForNextLine = false;
         endOfLineCursorFlashSpeed = 2;
         timeSinceLastCursorFlash = 0;
+        voix = GetComponent<AudioSource>();
     }
     void Update() {
 
@@ -86,6 +90,15 @@ public class TriggerDialog : MonoBehaviour
                 }
             }
         }
+
+        if (showLineProgressively == true && !voix.isPlaying)
+        {
+            voix.Play();
+        }else if (showLineProgressively == false && voix.isPlaying)
+        {
+            voix.Stop();
+        }
+
     }
 
     private void ReachEndOfLine() {
