@@ -10,11 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 964124129623934301}
   - component: {fileID: 964124129623934298}
-  - component: {fileID: 964124129623934299}
   - component: {fileID: 964124129623934300}
   - component: {fileID: 1134045920}
   - component: {fileID: 1267078625}
-  - component: {fileID: 1267078626}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -79,14 +77,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &964124129623934299
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 964124129623934296}
-  m_Enabled: 1
 --- !u!114 &964124129623934300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,26 +217,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!164 &1267078626
-AudioReverbFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 964124129623934296}
-  m_Enabled: 0
-  m_DryLevel: 0
-  m_Room: 0
-  m_RoomHF: 0
-  m_DecayTime: 1
-  m_DecayHFRatio: 0.5
-  m_ReflectionsLevel: -10000
-  m_ReverbLevel: 0
-  m_ReverbDelay: 0.04
-  m_Diffusion: 100
-  m_Density: 100
-  m_HFReference: 5000
-  m_RoomLF: 0
-  m_LFReference: 250
-  m_ReflectionsDelay: 0
-  m_ReverbPreset: 27

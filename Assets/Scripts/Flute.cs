@@ -8,13 +8,14 @@ public class Flute : MonoBehaviour
     private float note;
     private KeyCode lastPressedKey;
 
+    private bool isLocked;
+
     void Start() {
         audioFade = GetComponent<AudioFade>();
         foreach (Transform child in transform) {
             if (child.GetComponent<AudioFade>() != null)
                 secondAudioFade = child.GetComponent<AudioFade>();
         }
-        Debug.Log(secondAudioFade.gameObject.name);
         audioFade.source.priority = 0;
         note = -1f;
         lastPressedKey = KeyCode.None;
@@ -22,6 +23,9 @@ public class Flute : MonoBehaviour
 
 
     void Update() {
+
+        if (isLocked)
+            return;
 
         KeyCode pressedKey = KeyCode.None;
         if (Input.GetKeyDown(KeyCode.X)) {
@@ -65,5 +69,13 @@ public class Flute : MonoBehaviour
             if (secondAudioFade.isPlaying)
                 secondAudioFade.StopWithFadeOut();
         }
+    }
+
+    public void LockFlute() {
+        isLocked = true;
+    }
+
+    public void UnlockFlute() {
+        isLocked = false;
     }
 }

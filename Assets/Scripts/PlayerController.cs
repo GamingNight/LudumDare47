@@ -19,25 +19,26 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update() {
-        if (!lockController) {
 
-            float horizontal = Input.GetAxis("Horizontal");
-            move = new Vector3(horizontal, 0, 0);
-            transform.position += move * speed * Time.deltaTime;
+        if (lockController)
+            return;
 
-            if (horizontal < 0) {
-                spriteRenderer.flipX = true;
-            } else if (horizontal > 0) {
-                spriteRenderer.flipX = false;
-            }
+        float horizontal = Input.GetAxis("Horizontal");
+        move = new Vector3(horizontal, 0, 0);
+        transform.position += move * speed * Time.deltaTime;
 
-            if (move != Vector3.zero) {
-                if (!footstepSource.isPlaying)
-                    footstepSource.Play();
-            } else {
-                if (footstepSource.isPlaying)
-                    footstepSource.Stop();
-            }
+        if (horizontal < 0) {
+            spriteRenderer.flipX = true;
+        } else if (horizontal > 0) {
+            spriteRenderer.flipX = false;
+        }
+
+        if (move != Vector3.zero) {
+            if (!footstepSource.isPlaying)
+                footstepSource.Play();
+        } else {
+            if (footstepSource.isPlaying)
+                footstepSource.Stop();
         }
     }
 
