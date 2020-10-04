@@ -580,7 +580,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2163537653335961513, guid: 368b9a488b61adf4399b5cc0e57dbfe1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2163537653335961514, guid: 368b9a488b61adf4399b5cc0e57dbfe1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -699,6 +699,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1521421109 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2163537653335961513, guid: 368b9a488b61adf4399b5cc0e57dbfe1, type: 3}
+  m_PrefabInstance: {fileID: 1384818626}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1524640801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -708,7 +713,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4546327387162161043, guid: 6330fc748082c664d83fe12e13d921eb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4546327387162161043, guid: 6330fc748082c664d83fe12e13d921eb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -769,7 +774,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2163537653335961513, guid: 75ed7b3461ebc3043ae662d51c6d4588, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2163537653335961514, guid: 75ed7b3461ebc3043ae662d51c6d4588, type: 3}
       propertyPath: m_LocalPosition.x
@@ -937,6 +942,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1146597310}
+    - target: {fileID: 7592726446448514491, guid: 17747d8dd25f5654da3b77485171e7c0, type: 3}
+      propertyPath: currentLevel
+      value: 
+      objectReference: {fileID: 1521421109}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17747d8dd25f5654da3b77485171e7c0, type: 3}
 --- !u!1001 &3118201774727155035
