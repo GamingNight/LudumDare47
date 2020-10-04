@@ -29,6 +29,7 @@ public class TriggerDialog : MonoBehaviour
     private void Start() {
         triggerHighlight = GetComponent<TriggerHighlight>();
         parser = GetComponent<DialogParser>();
+        voix = GetComponent<AudioSource>();
         dialogId = 0;
         lineId = 0;
         cursorId = 0;
@@ -40,7 +41,6 @@ public class TriggerDialog : MonoBehaviour
         waitingForNextLine = false;
         endOfLineCursorFlashSpeed = 2;
         timeSinceLastCursorFlash = 0;
-        voix = GetComponent<AudioSource>();
     }
     void Update() {
 
@@ -91,11 +91,9 @@ public class TriggerDialog : MonoBehaviour
             }
         }
 
-        if (showLineProgressively && !voix.isPlaying)
-        {
+        if (showLineProgressively && !voix.isPlaying) {
             voix.Play();
-        }else if (!showLineProgressively && voix.isPlaying)
-        {
+        } else if (!showLineProgressively && voix.isPlaying) {
             voix.Stop();
         }
 
