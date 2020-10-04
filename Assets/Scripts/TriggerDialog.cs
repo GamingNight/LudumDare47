@@ -91,10 +91,10 @@ public class TriggerDialog : MonoBehaviour
             }
         }
 
-        if (showLineProgressively == true && !voix.isPlaying)
+        if (showLineProgressively && !voix.isPlaying)
         {
             voix.Play();
-        }else if (showLineProgressively == false && voix.isPlaying)
+        }else if (!showLineProgressively && voix.isPlaying)
         {
             voix.Stop();
         }
