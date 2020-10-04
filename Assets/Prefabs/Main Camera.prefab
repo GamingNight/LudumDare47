@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9fbb636e3d4c7647b04d62366c1e169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boundaries: {x: -6.37, y: 10}
+  boundaries: {x: -6.4, y: 6.4}
 --- !u!114 &1134045920
 MonoBehaviour:
   m_ObjectHideFlags: 0

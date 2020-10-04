@@ -450,8 +450,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2eb4681b1a4d044f8642c64a265badb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLeftestPosition: -15.8
-  playerRightestPosition: 18.7
+  playerLeftestPosition: -15.5
+  playerRightestPosition: 15.5
   player: {fileID: 0}
   currentLevel: {fileID: 0}
   switchLevelFadeImage: {fileID: 2669429849713741641}
