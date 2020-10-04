@@ -1,14 +1,23 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(AudioFade))]
-public class Flute : MonoBehaviour
+public class PlayerFlute : MonoBehaviour
 {
+    public enum Note
+    {
+        None, Lab, Sib, Do, Reb, Mib
+    }
+
     private AudioFade audioFade;
     private AudioFade secondAudioFade;
-    private float note;
+    private float pitchOffset;
     private KeyCode lastPressedKey;
 
     private bool isLocked;
+
+    private CircularBuffer<Note> memory;
+    private float memoryDuration;
+    private float timeSinceLastNote;
 
     void Start() {
         audioFade = GetComponent<AudioFade>();
@@ -17,58 +26,82 @@ public class Flute : MonoBehaviour
                 secondAudioFade = child.GetComponent<AudioFade>();
         }
         audioFade.source.priority = 0;
-        note = -1f;
+        pitchOffset = -1f;
         lastPressedKey = KeyCode.None;
+        memory = new CircularBuffer<Note>(10);
+        memoryDuration = 2;
+        timeSinceLastNote = 0;
     }
 
 
     void Update() {
 
-        if (isLocked)
+        if (isLocked) {
+            memory.Clear();
             return;
+        }
+
 
         KeyCode pressedKey = KeyCode.None;
+        Note notePlayed = Note.None;
         if (Input.GetKeyDown(KeyCode.X)) {
-            note = 0;
+            pitchOffset = 0;
             pressedKey = KeyCode.X;
+            notePlayed = Note.Lab;
         }
         if (Input.GetKeyDown(KeyCode.C)) {
-            note = 2;
+            pitchOffset = 2;
             pressedKey = KeyCode.C;
+            notePlayed = Note.Sib;
         }
         if (Input.GetKeyDown(KeyCode.V)) {
-            note = 4;
+            pitchOffset = 4;
             pressedKey = KeyCode.V;
+            notePlayed = Note.Do;
         }
         if (Input.GetKeyDown(KeyCode.B)) {
-            note = 5;
+            pitchOffset = 5;
             pressedKey = KeyCode.B;
+            notePlayed = Note.Reb;
         }
         if (Input.GetKeyDown(KeyCode.N)) {
-            note = 7;
+            pitchOffset = 7;
             pressedKey = KeyCode.N;
+            notePlayed = Note.Mib;
         }
 
         if (pressedKey != KeyCode.None) {
+            while (memory.isFull()) {
+                memory.Read();
+            }
+            memory.Add(notePlayed);
             if (!audioFade.isPlaying) {
                 if (secondAudioFade.isPlaying)
                     secondAudioFade.StopWithFadeOut();
-                audioFade.pitch = Mathf.Pow(2f, (note - 4f) / 12.0f);
+                audioFade.pitch = Mathf.Pow(2f, (pitchOffset - 4f) / 12.0f);
                 audioFade.PlayWithFadeIn();
             } else {
                 if (audioFade.isPlaying)
                     audioFade.StopWithFadeOut();
-                secondAudioFade.pitch = Mathf.Pow(2f, (note - 4f) / 12.0f);
+                secondAudioFade.pitch = Mathf.Pow(2f, (pitchOffset - 4f) / 12.0f);
                 secondAudioFade.PlayWithFadeIn();
             }
             lastPressedKey = pressedKey;
+            timeSinceLastNote = 0;
+        } else {
+            timeSinceLastNote += Time.deltaTime;
+            if (timeSinceLastNote > memoryDuration) {
+                memory.ReadAll();
+            }
         }
+
         if (Input.GetKeyUp(lastPressedKey)) {
             if (audioFade.isPlaying)
                 audioFade.StopWithFadeOut();
             if (secondAudioFade.isPlaying)
                 secondAudioFade.StopWithFadeOut();
         }
+
     }
 
     public void LockFlute() {
@@ -77,5 +110,9 @@ public class Flute : MonoBehaviour
 
     public void UnlockFlute() {
         isLocked = false;
+    }
+
+    public Note[] ReadMemory() {
+        return memory.ReadAllNoDelete();
     }
 }

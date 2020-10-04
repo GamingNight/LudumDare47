@@ -50,8 +50,9 @@ public class GameController : MonoBehaviour
         newLevel.SetActive(true);
         currentLevel.SetActive(false);
         currentLevel = newLevel;
-        //Shift player to the left
+        //Shift player to its new position
         player.transform.position = new Vector3(playerPosX, player.transform.position.y, player.transform.position.z);
+        player.GetComponent<ParticleSystem>().Clear();
     }
 
     private IEnumerator LevelSwitchingCoroutine(float dur, GameObject newLevel, float playerPosX) {

@@ -11,7 +11,7 @@ public class PlayerMode : MonoBehaviour
 
     private Mode currentMode;
     public PlayerController controller;
-    public Flute flute;
+    public PlayerFlute flute;
 
     private void Start() {
         currentMode = Mode.CONTROLLER;
@@ -28,5 +28,9 @@ public class PlayerMode : MonoBehaviour
             flute.LockFlute();
             controller.UnlockController();
         }
+    }
+
+    public Mode GetCurrentMode() {
+        return currentMode;
     }
 }

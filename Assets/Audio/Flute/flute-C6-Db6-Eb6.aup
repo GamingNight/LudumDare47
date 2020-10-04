@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="flute-C6-Db6-Eb6_data" version="1.3.0" audacityversion="2.3.0" sel0="3.1802267574" sel1="6.6812684240" vpos="0" h="0.0000000000" zoom="205.2005131616" rate="48000.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags>
+		<tag name="YEAR" value="2020-10-04T01:05:44+02:00"/>
+	</tags>
+	<wavetrack name="flute-C6" channel="2" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="11025" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="18362">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808538.au" len="18362" min="-0.145996" max="0.141876" rms="0.057165"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="flute-C6" channel="2" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="11025" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="1.57795918" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="18362">
+				<waveblock start="0">
+					<simpleblockfile filename="e080839e.au" len="18362" min="-0.137677" max="0.13389" rms="0.054086"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="3.24344671" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="10">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808505.au" len="10" min="0.0" max="0.0" rms="0.0"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="flute-C6" channel="2" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="11025" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="3.18022676" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="38588">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808bc8.au" len="38588" min="-0.135309" max="0.134562" rms="0.037574"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>

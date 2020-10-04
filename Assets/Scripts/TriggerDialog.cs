@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,6 +25,8 @@ public class TriggerDialog : MonoBehaviour
 
     private AudioSource voix;
 
+    private bool goTriggerAutomatically;
+
     private void Start() {
         triggerHighlight = GetComponent<TriggerHighlight>();
         parser = GetComponent<DialogParser>();
@@ -41,14 +42,18 @@ public class TriggerDialog : MonoBehaviour
         waitingForNextLine = false;
         endOfLineCursorFlashSpeed = 2;
         timeSinceLastCursorFlash = 0;
+        goTriggerAutomatically = false;
     }
     void Update() {
 
-        if (Input.GetKeyDown(KeyCode.Space) && triggerHighlight.IsHighLighted() && !dialogIsInProgress) {
+        bool manualTrigger = Input.GetKeyDown(KeyCode.Space) && triggerHighlight != null && triggerHighlight.IsHighLighted();
+        bool automaticTrigger = goTriggerAutomatically;
+        if ((manualTrigger || automaticTrigger) && !dialogIsInProgress) {
             textUI = GameController.GetInstance().LaunchDialogBox(this);
             endOfLineCursorImg = textUI.GetComponentInChildren<Image>();
             dialogIsInProgress = true;
             currentDialog = parser.GetDialog(dialogId);
+            goTriggerAutomatically = false;
         }
 
         if (dialogIsInProgress) {
@@ -111,5 +116,9 @@ public class TriggerDialog : MonoBehaviour
         waitingForNextLine = false;
         endOfLineCursorImg.enabled = false;
         timeSinceLastCursorFlash = 0;
+    }
+
+    public void TriggerDialogAutomatically() {
+        goTriggerAutomatically = true;
     }
 }
