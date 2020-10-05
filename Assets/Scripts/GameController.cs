@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
@@ -48,7 +49,7 @@ public class GameController : MonoBehaviour
 
     private void ResetPlayer() {
         player.transform.position = new Vector3(-9, 0, 0);
-        player.GetComponent<SpriteRenderer>().color = new Color(65f/255f, 63f / 255f, 60f / 255f);
+        player.GetComponent<SpriteRenderer>().color = new Color(65f / 255f, 63f / 255f, 60f / 255f);
         foreach (Transform child in player.transform) {
             if (child.tag == "Flute")
                 child.gameObject.SetActive(false);
@@ -57,6 +58,9 @@ public class GameController : MonoBehaviour
 
     private void SwitchLevels(GameObject newLevel, float playerPosX) {
         //Switch levels
+        if (currentLevel.GetComponent<LevelData>().id == 5) {
+            SceneManager.LoadScene("Main 2");
+        }
         if (newLevel.GetComponent<LevelData>().id == 4)
             nextLevelTrigger.SetActive(false);
         newLevel.SetActive(true);
