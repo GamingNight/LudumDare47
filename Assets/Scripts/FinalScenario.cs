@@ -98,7 +98,7 @@ public class FinalScenario : MonoBehaviour
         Vector3 move = new Vector3(1, 0, 0);
         npc.transform.position += move * 2 * Time.deltaTime;
         npc.GetComponent<Animator>().SetBool("isWalking", true);
-        AudioSource footstepsSound = transform.Find("footsteps").GetComponent<AudioSource>();
+        AudioSource footstepsSound = npc.transform.Find("footsteps").GetComponent<AudioSource>();
         if (!footstepsSound.isPlaying) {
             footstepsSound.Play();
         }
