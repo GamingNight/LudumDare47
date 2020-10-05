@@ -46,6 +46,15 @@ public class GameController : MonoBehaviour
         StartCoroutine(LevelSwitchingCoroutine(1, otherLevel, playerPosX));
     }
 
+    private void ResetPlayer() {
+        player.transform.position = new Vector3(-9, 0, 0);
+        player.GetComponent<SpriteRenderer>().color = new Color(65f/255f, 63f / 255f, 60f / 255f);
+        foreach (Transform child in player.transform) {
+            if (child.tag == "Flute")
+                child.gameObject.SetActive(false);
+        }
+    }
+
     private void SwitchLevels(GameObject newLevel, float playerPosX) {
         //Switch levels
         if (newLevel.GetComponent<LevelData>().id == 4)
@@ -56,6 +65,9 @@ public class GameController : MonoBehaviour
         //Shift player to its new position
         player.transform.position = new Vector3(playerPosX, player.transform.position.y, player.transform.position.z);
         player.GetComponentInChildren<ParticleSystem>().Clear();
+        if (newLevel.GetComponent<LevelData>().id == 5) {
+            ResetPlayer();
+        }
     }
 
     private IEnumerator LevelSwitchingCoroutine(float dur, GameObject newLevel, float playerPosX) {

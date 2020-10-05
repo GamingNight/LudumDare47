@@ -50,12 +50,14 @@ public class PlayerController : MonoBehaviour
     }
 
     public void LockController() {
+        Debug.Log("LockController");
         lockController = true;
         footstepSource.Stop();
         anim.SetBool("isWalking", false);
     }
 
     public void UnlockController() {
+        Debug.Log("UnlockController");
         lockController = false;
     }
 
