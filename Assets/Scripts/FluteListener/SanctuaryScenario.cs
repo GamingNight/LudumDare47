@@ -56,6 +56,7 @@ public class SanctuaryScenario : AbstractFluteListenerScenario
         } else if (currentState == State.END) {
             GameController.GetInstance().player.GetComponent<PlayerController>().UnlockController();
             GameController.GetInstance().ActivateNextLevelTrigger();
+            currentState = State.NONE;
         }
     }
 }
