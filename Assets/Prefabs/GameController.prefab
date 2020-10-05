@@ -457,3 +457,4 @@ MonoBehaviour:
   switchLevelFadeImage: {fileID: 2669429849713741641}
   dialogPanel: {fileID: 1567964762}
   dialogSpeed: 20
+  nextLevelTrigger: {fileID: 0}

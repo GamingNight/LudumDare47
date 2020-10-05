@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
     public Image switchLevelFadeImage;
     public GameObject dialogPanel;
     public float dialogSpeed = 2;
+    public GameObject nextLevelTrigger;
 
     private void Awake() {
         if (INSTANCE == null) {
@@ -47,6 +48,8 @@ public class GameController : MonoBehaviour
 
     private void SwitchLevels(GameObject newLevel, float playerPosX) {
         //Switch levels
+        if (newLevel.GetComponent<LevelData>().id == 4)
+            nextLevelTrigger.SetActive(false);
         newLevel.SetActive(true);
         currentLevel.SetActive(false);
         currentLevel = newLevel;
@@ -88,5 +91,9 @@ public class GameController : MonoBehaviour
         dialogPanel.SetActive(false);
         player.GetComponent<PlayerController>().UnlockController();
         player.GetComponent<PlayerMode>().UnlockSwitch();
+    }
+
+    public void ActivateNextLevelTrigger() {
+        nextLevelTrigger.SetActive(true);
     }
 }

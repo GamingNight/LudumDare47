@@ -47,7 +47,7 @@ public class SanctuaryScenario : AbstractFluteListenerScenario
             }
         } else if (currentState == State.PLAYER_COLOR_CHANGE) {
             SpriteRenderer playerSpriteRenderer = GameController.GetInstance().player.GetComponent<SpriteRenderer>();
-            Color.Lerp(playerInitColor, Color.white, timeSinceLastState / colorChangeDuration);
+            playerSpriteRenderer.color = Color.Lerp(playerInitColor, Color.white, timeSinceLastState / colorChangeDuration);
             timeSinceLastState += Time.deltaTime;
             if (timeSinceLastState >= colorChangeDuration) {
                 currentState = State.END;
@@ -55,6 +55,7 @@ public class SanctuaryScenario : AbstractFluteListenerScenario
             }
         } else if (currentState == State.END) {
             GameController.GetInstance().player.GetComponent<PlayerController>().UnlockController();
+            GameController.GetInstance().ActivateNextLevelTrigger();
         }
     }
 }
