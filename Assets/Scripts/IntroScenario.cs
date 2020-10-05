@@ -122,13 +122,9 @@ public class IntroScenario : MonoBehaviour
         Vector3 move = new Vector3(1, 0, 0);
         npc.transform.position += move * 2 * Time.deltaTime;
         npc.GetComponent<Animator>().SetBool("isWalking", true);
-        AudioSource footstepsSound = null;
-        foreach (Transform child in npc.transform) {
-            footstepsSound = child.GetComponent<AudioSource>();
-            if (footstepsSound != null && !footstepsSound.isPlaying) {
-                footstepsSound.Play();
-                break;
-            }
+        AudioSource footstepsSound = npc.transform.Find("footsteps").GetComponent<AudioSource>();
+        if (!footstepsSound.isPlaying) {
+            footstepsSound.Play();
         }
         if (npc.transform.position.x >= GameController.GetInstance().player.transform.position.x - 0.5) {
             npc.GetComponent<Animator>().SetBool("isWalking", false);

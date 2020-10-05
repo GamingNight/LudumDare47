@@ -98,13 +98,9 @@ public class FinalScenario : MonoBehaviour
         Vector3 move = new Vector3(1, 0, 0);
         npc.transform.position += move * 2 * Time.deltaTime;
         npc.GetComponent<Animator>().SetBool("isWalking", true);
-        AudioSource footstepsSound = null;
-        foreach (Transform child in npc.transform) {
-            footstepsSound = child.GetComponent<AudioSource>();
-            if (footstepsSound != null && !footstepsSound.isPlaying) {
-                footstepsSound.Play();
-                break;
-            }
+        AudioSource footstepsSound = transform.Find("footsteps").GetComponent<AudioSource>();
+        if (!footstepsSound.isPlaying) {
+            footstepsSound.Play();
         }
 
         Vector2 boundaries = Camera.main.GetComponent<CameraMovement>().boundaries;
