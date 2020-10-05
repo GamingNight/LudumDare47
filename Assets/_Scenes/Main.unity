@@ -315,6 +315,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Niveau 0 - tuto
       objectReference: {fileID: 0}
+    - target: {fileID: 7724037254426503230, guid: 6232721a5f8e025408e49d5bbb619458, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7724037254426503231, guid: 6232721a5f8e025408e49d5bbb619458, type: 3}
       propertyPath: previousLevel
       value: 

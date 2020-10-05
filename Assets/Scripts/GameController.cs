@@ -59,6 +59,7 @@ public class GameController : MonoBehaviour
     private void SwitchLevels(GameObject newLevel, float playerPosX) {
         //Switch levels
         if (currentLevel.GetComponent<LevelData>().id == 5) {
+            Debug.Log("Load Scene");
             SceneManager.LoadScene("Main 2");
         }
         if (newLevel.GetComponent<LevelData>().id == 4)
