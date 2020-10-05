@@ -48,7 +48,8 @@ public class TriggerDialog : MonoBehaviour
 
         bool manualTrigger = Input.GetKeyDown(KeyCode.Space) && triggerHighlight != null && triggerHighlight.IsHighLighted();
         bool automaticTrigger = goTriggerAutomatically;
-        if ((manualTrigger || automaticTrigger) && !dialogIsInProgress) {
+        bool playerIsAvailable = GameController.GetInstance().player.GetComponent<PlayerMode>().GetCurrentMode() == PlayerMode.Mode.CONTROLLER;
+        if ((manualTrigger || automaticTrigger) && playerIsAvailable && !dialogIsInProgress) {
             textUI = GameController.GetInstance().LaunchDialogBox(this);
             endOfLineCursorImg = textUI.GetComponentInChildren<Image>();
             dialogIsInProgress = true;
