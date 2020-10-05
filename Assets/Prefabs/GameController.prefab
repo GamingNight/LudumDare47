@@ -218,7 +218,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 30b903047a6b04e45bcfb35f00467ad7, type: 3}
+    m_Font: {fileID: 12800000, guid: bd8c20ad9fcb1994f8fcc5f1f24ae344, type: 3}
     m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
@@ -450,8 +450,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2eb4681b1a4d044f8642c64a265badb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLeftestPosition: -15.5
-  playerRightestPosition: 15.5
+  playerLeftestPosition: -16.5
+  playerRightestPosition: 12.5
   player: {fileID: 0}
   currentLevel: {fileID: 0}
   switchLevelFadeImage: {fileID: 2669429849713741641}

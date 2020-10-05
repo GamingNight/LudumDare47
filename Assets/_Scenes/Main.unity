@@ -255,6 +255,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Niveau 0 - tuto
       objectReference: {fileID: 0}
+    - target: {fileID: 7724037254426503230, guid: 6232721a5f8e025408e49d5bbb619458, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7724037254426503231, guid: 6232721a5f8e025408e49d5bbb619458, type: 3}
       propertyPath: previousLevel
       value: 
@@ -1006,6 +1010,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4546327387162161040, guid: 6330fc748082c664d83fe12e13d921eb, type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4546327387162161043, guid: 6330fc748082c664d83fe12e13d921eb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2
@@ -1118,14 +1126,6 @@ PrefabInstance:
     - target: {fileID: 7592726446448514491, guid: 17747d8dd25f5654da3b77485171e7c0, type: 3}
       propertyPath: currentLevel
       value: 
-      objectReference: {fileID: 1033132578}
-    - target: {fileID: 7592726446448514491, guid: 17747d8dd25f5654da3b77485171e7c0, type: 3}
-      propertyPath: playerLeftestPosition
-      value: -16.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7592726446448514491, guid: 17747d8dd25f5654da3b77485171e7c0, type: 3}
-      propertyPath: playerRightestPosition
-      value: 12.5
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 407672249}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17747d8dd25f5654da3b77485171e7c0, type: 3}
