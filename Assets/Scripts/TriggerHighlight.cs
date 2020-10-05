@@ -13,9 +13,10 @@ public class TriggerHighlight : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        
-        if(collision.gameObject.tag == "Player") {
-            highlightObject.SetActive(true);
+
+        if (collision.gameObject.tag == "Player") {
+            if (highlightObject != null)
+                highlightObject.SetActive(true);
             isHighlighted = true;
         }
     }
@@ -23,7 +24,8 @@ public class TriggerHighlight : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision) {
 
         if (collision.gameObject.tag == "Player") {
-            highlightObject.SetActive(false);
+            if (highlightObject != null)
+                highlightObject.SetActive(false);
             isHighlighted = false;
         }
     }

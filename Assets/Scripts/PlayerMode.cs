@@ -6,7 +6,7 @@ public class PlayerMode : MonoBehaviour
 {
     public enum Mode
     {
-        CONTROLLER, FLUTE
+        CONTROLLER, FLUTE, NONE
     }
 
     private Mode currentMode;
@@ -14,10 +14,12 @@ public class PlayerMode : MonoBehaviour
     public PlayerFlute flute;
     private Animator animator;
     private bool lockSwitch;
+    private Mode goToMode;
 
     private void Start() {
         currentMode = Mode.CONTROLLER;
         animator = GetComponent<Animator>();
+        goToMode = Mode.NONE;
     }
 
     private void Update() {
@@ -25,21 +27,27 @@ public class PlayerMode : MonoBehaviour
         if (lockSwitch)
             return;
 
-        if (Input.GetKeyDown(KeyCode.DownArrow)) {
+        if (Input.GetKeyDown(KeyCode.DownArrow) || goToMode == Mode.FLUTE) {
             currentMode = Mode.FLUTE;
             controller.LockController();
             flute.UnlockFlute();
             animator.SetBool("isFluting", true);
-        } else if (Input.GetKeyDown(KeyCode.UpArrow)) {
+            goToMode = Mode.NONE;
+        } else if (Input.GetKeyDown(KeyCode.UpArrow) || goToMode == Mode.CONTROLLER) {
             currentMode = Mode.CONTROLLER;
             flute.LockFlute();
             controller.UnlockController();
             animator.SetBool("isFluting", false);
+            goToMode = Mode.NONE;
         }
     }
 
     public Mode GetCurrentMode() {
         return currentMode;
+    }
+
+    public void GoToMode(Mode mode) {
+        goToMode = mode;
     }
 
     public void LockSwitch() {
