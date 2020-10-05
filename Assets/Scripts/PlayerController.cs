@@ -13,9 +13,12 @@ public class PlayerController : MonoBehaviour
     private Vector3 move;
     private bool lockController = false;
 
+    private Animator anim;
+
     private void Start() {
         footstepSource = GetComponent<AudioSource>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     void Update() {
@@ -34,9 +37,11 @@ public class PlayerController : MonoBehaviour
         }
 
         if (move != Vector3.zero) {
+            anim.SetBool("isWalking", true);
             if (!footstepSource.isPlaying)
                 footstepSource.Play();
         } else {
+            anim.SetBool("isWalking", false);
             if (footstepSource.isPlaying)
                 footstepSource.Stop();
         }
