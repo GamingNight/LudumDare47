@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Resources;
 using UnityEditor;
 using UnityEngine;
 
@@ -7,7 +8,7 @@ public class IntroScenario : MonoBehaviour
 {
     public enum State
     {
-        NONE, INIT, ZOOM_IN, WAIT_NPC, NPC_POPUP, NPC_MOVING, WAIT_DIALOG, DIALOG, WAIT_END_DIALOG, GIVE_FLUTE, FLUTE_VICTORY_SOUND, WAIT_DIALOG2, DIALOG2, WAIT_END_DIALOG2, ZOOM_OUT, WAIT_ENDING, END
+        NONE, INIT, ZOOM_IN, WAIT_NPC, NPC_POPUP, NPC_MOVING, WAIT_DIALOG, DIALOG, WAIT_END_DIALOG, GIVE_FLUTE, WAIT_VICTORY_SOUND, FLUTE_VICTORY_SOUND, WAIT_DIALOG2, DIALOG2, WAIT_END_DIALOG2, ZOOM_OUT, WAIT_ENDING, END
     }
 
     public GameObject npc;
@@ -17,6 +18,7 @@ public class IntroScenario : MonoBehaviour
     private float waitDurToCameraZoomIn;
     private float waitDurToNPCMoving;
     private float waitDurToDialog;
+    private float waitDurToVictorySound;
     private float waitDurToEnding;
 
     void Start() {
@@ -25,6 +27,7 @@ public class IntroScenario : MonoBehaviour
         waitDurToCameraZoomIn = 1;
         waitDurToNPCMoving = 1;
         waitDurToDialog = 1;
+        waitDurToVictorySound = 1;
         waitDurToEnding = 0;
     }
 
@@ -52,15 +55,21 @@ public class IntroScenario : MonoBehaviour
         } else if (currentState == State.WAIT_DIALOG) {
             currentState = WaitTo(State.DIALOG, waitDurToDialog);
         } else if (currentState == State.DIALOG) {
-            currentState = LaunchDialog();
+            currentState = LaunchDialog(1);
         } else if (currentState == State.WAIT_END_DIALOG) {
-            currentState = WaitForDialogEnding();
+            currentState = WaitForDialogEnding(1);
         } else if (currentState == State.GIVE_FLUTE) {
             currentState = GiveFlute();
+        } else if (currentState == State.WAIT_VICTORY_SOUND) {
+            currentState = WaitTo(State.FLUTE_VICTORY_SOUND, waitDurToVictorySound);
         } else if (currentState == State.FLUTE_VICTORY_SOUND) {
+            currentState = PlayFluteVictorySound();
         } else if (currentState == State.WAIT_DIALOG2) {
+            currentState = WaitForDialog2();
         } else if (currentState == State.DIALOG2) {
+            currentState = LaunchDialog(2);
         } else if (currentState == State.WAIT_END_DIALOG2) {
+            currentState = WaitForDialogEnding(2);
         } else if (currentState == State.ZOOM_OUT) {
             currentState = CameraZoomOut();
         } else if (currentState == State.WAIT_ENDING) {
@@ -130,17 +139,25 @@ public class IntroScenario : MonoBehaviour
         return res;
     }
 
-    private State LaunchDialog() {
+    private State LaunchDialog(int dialogId) {
         npc.GetComponent<TriggerDialog>().TriggerDialogAutomatically();
         timeSinceLastState = 0;
-        return State.WAIT_END_DIALOG;
+        State res;
+        if (dialogId == 1)
+            res = State.WAIT_END_DIALOG;
+        else
+            res = State.WAIT_END_DIALOG2;
+        return res;
     }
 
-    private State WaitForDialogEnding() {
+    private State WaitForDialogEnding(int dialogId) {
         State res = currentState;
         if (!npc.GetComponent<TriggerDialog>().IsDialogInProgress()) {
             GameController.GetInstance().player.GetComponent<PlayerController>().LockController();
-            res = State.GIVE_FLUTE;
+            if (dialogId == 1)
+                res = State.GIVE_FLUTE;
+            else
+                res = State.ZOOM_OUT;
             timeSinceLastState = 0;
         }
         return res;
@@ -155,9 +172,25 @@ public class IntroScenario : MonoBehaviour
             if (child.tag == "Flute")
                 child.gameObject.SetActive(true);
         }
-        return State.FLUTE_VICTORY_SOUND;
+        timeSinceLastState = 0;
+        return State.WAIT_VICTORY_SOUND;
     }
 
+    private State PlayFluteVictorySound() {
+        GetComponent<AudioSource>().Play();
+        timeSinceLastState = 0;
+        return State.WAIT_DIALOG2;
+    }
+
+    private State WaitForDialog2() {
+        State res = currentState;
+        if (!GetComponent<AudioSource>().isPlaying) {
+            res = State.DIALOG2;
+            timeSinceLastState = 0;
+        }
+        return res;
+
+    }
     private State CameraZoomOut() {
         Camera.main.GetComponent<Animator>().SetTrigger("zoomOut");
         waitDurToEnding += Camera.main.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length;
