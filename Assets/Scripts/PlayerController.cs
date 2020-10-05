@@ -52,6 +52,7 @@ public class PlayerController : MonoBehaviour
     public void LockController() {
         lockController = true;
         footstepSource.Stop();
+        anim.SetBool("isWalking", false);
     }
 
     public void UnlockController() {

@@ -13,6 +13,7 @@ public class PlayerMode : MonoBehaviour
     public PlayerController controller;
     public PlayerFlute flute;
     private Animator animator;
+    private bool lockSwitch;
 
     private void Start() {
         currentMode = Mode.CONTROLLER;
@@ -20,6 +21,9 @@ public class PlayerMode : MonoBehaviour
     }
 
     private void Update() {
+
+        if (lockSwitch)
+            return;
 
         if (Input.GetKeyDown(KeyCode.DownArrow)) {
             currentMode = Mode.FLUTE;
@@ -36,5 +40,13 @@ public class PlayerMode : MonoBehaviour
 
     public Mode GetCurrentMode() {
         return currentMode;
+    }
+
+    public void LockSwitch() {
+        lockSwitch = true;
+    }
+
+    public void UnlockSwitch() {
+        lockSwitch = false;
     }
 }

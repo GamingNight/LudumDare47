@@ -122,4 +122,8 @@ public class TriggerDialog : MonoBehaviour
     public void TriggerDialogAutomatically() {
         goTriggerAutomatically = true;
     }
+
+    public bool IsDialogInProgress() {
+        return dialogIsInProgress;
+    }
 }

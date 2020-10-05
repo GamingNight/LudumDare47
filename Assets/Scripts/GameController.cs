@@ -80,11 +80,13 @@ public class GameController : MonoBehaviour
     public Text LaunchDialogBox(TriggerDialog dialogLauncher) {
         dialogPanel.SetActive(true);
         player.GetComponent<PlayerController>().LockController();
+        player.GetComponent<PlayerMode>().LockSwitch();
         return dialogPanel.GetComponentInChildren<Text>();
     }
 
     public void QuitDialogBox() {
         dialogPanel.SetActive(false);
         player.GetComponent<PlayerController>().UnlockController();
+        player.GetComponent<PlayerMode>().UnlockSwitch();
     }
 }
