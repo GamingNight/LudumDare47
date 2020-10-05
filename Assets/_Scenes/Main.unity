@@ -389,6 +389,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Niveau 3 - montage
       objectReference: {fileID: 0}
+    - target: {fileID: 7470903162343275967, guid: a3774044389accf40806d1ddfca5a801, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3774044389accf40806d1ddfca5a801, type: 3}
 --- !u!1 &814486228
