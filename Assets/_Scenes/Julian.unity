@@ -416,7 +416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &814486229
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -613,10 +613,6 @@ PrefabInstance:
       propertyPath: nextLevel
       value: 
       objectReference: {fileID: 1406320123}
-    - target: {fileID: 5011461111233465067, guid: 2649eca50fb0b0b49b60431774d06c42, type: 3}
-      propertyPath: id
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2649eca50fb0b0b49b60431774d06c42, type: 3}
 --- !u!1 &1248419248 stripped
@@ -1158,6 +1154,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4546327387162161040, guid: 6330fc748082c664d83fe12e13d921eb, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4546327387162161043, guid: 6330fc748082c664d83fe12e13d921eb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.12
@@ -1271,5 +1271,9 @@ PrefabInstance:
       propertyPath: currentLevel
       value: 
       objectReference: {fileID: 1248419248}
+    - target: {fileID: 7592726446448514491, guid: 17747d8dd25f5654da3b77485171e7c0, type: 3}
+      propertyPath: nextLevelTrigger
+      value: 
+      objectReference: {fileID: 814486228}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17747d8dd25f5654da3b77485171e7c0, type: 3}
