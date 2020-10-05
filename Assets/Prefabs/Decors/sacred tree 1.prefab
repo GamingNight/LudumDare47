@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3179789468207796570
 Transform:
   m_ObjectHideFlags: 0
@@ -48,7 +48,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6774240851953009767
 Transform:
   m_ObjectHideFlags: 0
@@ -83,8 +83,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6176039753764136589}
   - component: {fileID: 6176039753764136584}
-  - component: {fileID: 6176039753764136591}
-  - component: {fileID: 6176039753764136590}
   m_Layer: 0
   m_Name: apple leafs (1)
   m_TagString: Untagged
@@ -157,44 +155,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6176039753764136591
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6176039753764136588}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eae72c055fb4678468c10ed9f8e6e376, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6176039753764136590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6176039753764136588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df4fa928cb62b1f44be31e0aa914152e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomRotation: 0
-  randomFlipX: 0
-  randomSprite: 0
-  allSprites:
-  - {fileID: 21300000, guid: 9dbbc19e8cbcc8b4cbd6f48e4889b311, type: 3}
-  - {fileID: 21300000, guid: b9d35724b4ab29d43b15c657a3e8c249, type: 3}
-  - {fileID: 21300000, guid: d92c59df15716b04ebbfe9c35c5123d7, type: 3}
 --- !u!1 &6176039754535498267
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,8 +165,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6176039754535498260}
   - component: {fileID: 6176039754535498263}
-  - component: {fileID: 6176039754535498262}
-  - component: {fileID: 6176039754535498261}
   m_Layer: 0
   m_Name: apple leafs (2)
   m_TagString: Untagged
@@ -279,44 +237,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6176039754535498262
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6176039754535498267}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eae72c055fb4678468c10ed9f8e6e376, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6176039754535498261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6176039754535498267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df4fa928cb62b1f44be31e0aa914152e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomRotation: 0
-  randomFlipX: 0
-  randomSprite: 0
-  allSprites:
-  - {fileID: 21300000, guid: 9dbbc19e8cbcc8b4cbd6f48e4889b311, type: 3}
-  - {fileID: 21300000, guid: b9d35724b4ab29d43b15c657a3e8c249, type: 3}
-  - {fileID: 21300000, guid: d92c59df15716b04ebbfe9c35c5123d7, type: 3}
 --- !u!1 &6176039754595497110
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,8 +329,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6176039754745461541}
   - component: {fileID: 6176039754745461543}
-  - component: {fileID: 6176039754745461542}
-  - component: {fileID: 6176039754745461536}
   m_Layer: 0
   m_Name: apple leafs
   m_TagString: Untagged
@@ -483,44 +401,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6176039754745461542
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6176039754745461540}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eae72c055fb4678468c10ed9f8e6e376, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6176039754745461536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6176039754745461540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df4fa928cb62b1f44be31e0aa914152e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomRotation: 0
-  randomFlipX: 0
-  randomSprite: 0
-  allSprites:
-  - {fileID: 21300000, guid: 9dbbc19e8cbcc8b4cbd6f48e4889b311, type: 3}
-  - {fileID: 21300000, guid: b9d35724b4ab29d43b15c657a3e8c249, type: 3}
-  - {fileID: 21300000, guid: d92c59df15716b04ebbfe9c35c5123d7, type: 3}
 --- !u!1 &6176039754960263747
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,6 +410,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6176039754960264124}
+  - component: {fileID: 7153042682963293138}
   m_Layer: 0
   m_Name: sacred tree 1
   m_TagString: Untagged
@@ -554,6 +435,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &7153042682963293138
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6176039754960263747}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e3a19be637334a54c9993bff950d3a70, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &5521205088463646738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -563,15 +463,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingLayerID
-      value: -1500161225
+      value: 1510757553
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingOrder
-      value: -6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481842, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_Name
@@ -637,15 +537,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingLayerID
-      value: -1500161225
+      value: 1510757553
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingOrder
-      value: -6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481842, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_Name
@@ -711,15 +611,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingLayerID
-      value: -1500161225
+      value: 1510757553
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingOrder
-      value: -6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481842, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_Name
@@ -785,15 +685,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingLayerID
-      value: -1500161225
+      value: 1510757553
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingOrder
-      value: -6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481842, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_Name
@@ -859,15 +759,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingLayerID
-      value: -1500161225
+      value: 1510757553
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingOrder
-      value: -6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481842, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_Name
@@ -933,15 +833,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingLayerID
-      value: -1500161225
+      value: 1510757553
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingOrder
-      value: -6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481842, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_Name
@@ -1007,15 +907,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingLayerID
-      value: -1500161225
+      value: 1510757553
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingOrder
-      value: -6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481842, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_Name
@@ -1081,15 +981,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingLayerID
-      value: -1500161225
+      value: 1510757553
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingOrder
-      value: -6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481842, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_Name
@@ -1155,15 +1055,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingLayerID
-      value: -1500161225
+      value: 1510757553
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingOrder
-      value: -6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481842, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_Name
@@ -1229,15 +1129,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingLayerID
-      value: -1500161225
+      value: 1510757553
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481841, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_SortingOrder
-      value: -6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1813527508978481842, guid: 1f3f7b4e7f348274f84e103e2e792859, type: 3}
       propertyPath: m_Name
