@@ -52,7 +52,7 @@ public class GameController : MonoBehaviour
         currentLevel = newLevel;
         //Shift player to its new position
         player.transform.position = new Vector3(playerPosX, player.transform.position.y, player.transform.position.z);
-        player.GetComponent<ParticleSystem>().Clear();
+        player.GetComponentInChildren<ParticleSystem>().Clear();
     }
 
     private IEnumerator LevelSwitchingCoroutine(float dur, GameObject newLevel, float playerPosX) {
@@ -86,5 +86,9 @@ public class GameController : MonoBehaviour
     public void QuitDialogBox() {
         dialogPanel.SetActive(false);
         player.GetComponent<PlayerController>().UnlockController();
+    }
+
+    private void Update() {
+        //Debug.Log(Camera.main.ScreenToWorldPoint(new Vector3(0 - Screen.width / 2, Screen.height, 0)));
     }
 }

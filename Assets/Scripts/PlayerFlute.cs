@@ -106,6 +106,8 @@ public class PlayerFlute : MonoBehaviour
 
     public void LockFlute() {
         isLocked = true;
+        audioFade.StopWithFadeOut();
+        secondAudioFade.StopWithFadeOut();
     }
 
     public void UnlockFlute() {

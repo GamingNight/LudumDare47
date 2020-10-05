@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
 
     public void LockController() {
         lockController = true;
+        footstepSource.Stop();
     }
 
     public void UnlockController() {
