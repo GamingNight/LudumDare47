@@ -1025,6 +1025,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1267078625, guid: 0bd93fbad561b974292975cd3f00968f, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 964124129623934296, guid: 0bd93fbad561b974292975cd3f00968f, type: 3}
       propertyPath: m_Name
       value: Main Camera
