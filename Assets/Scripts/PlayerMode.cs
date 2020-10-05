@@ -12,9 +12,11 @@ public class PlayerMode : MonoBehaviour
     private Mode currentMode;
     public PlayerController controller;
     public PlayerFlute flute;
+    private Animator animator;
 
     private void Start() {
         currentMode = Mode.CONTROLLER;
+        animator = GetComponent<Animator>();
     }
 
     private void Update() {
@@ -23,10 +25,12 @@ public class PlayerMode : MonoBehaviour
             currentMode = Mode.FLUTE;
             controller.LockController();
             flute.UnlockFlute();
+            animator.SetBool("isFluting", true);
         } else if (Input.GetKeyDown(KeyCode.UpArrow)) {
             currentMode = Mode.CONTROLLER;
             flute.LockFlute();
             controller.UnlockController();
+            animator.SetBool("isFluting", false);
         }
     }
 
