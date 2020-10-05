@@ -33,9 +33,9 @@ public class PlayerController : MonoBehaviour
         transform.position = new Vector3(Mathf.Max(leftCameraLimit, transform.position.x), transform.position.y, transform.position.z);
 
         if (horizontal < 0) {
-            spriteRenderer.flipX = true;
+            transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
         } else if (horizontal > 0) {
-            spriteRenderer.flipX = false;
+            transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
         }
 
         if (move != Vector3.zero) {
