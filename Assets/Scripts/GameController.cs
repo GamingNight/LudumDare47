@@ -87,8 +87,4 @@ public class GameController : MonoBehaviour
         dialogPanel.SetActive(false);
         player.GetComponent<PlayerController>().UnlockController();
     }
-
-    private void Update() {
-        //Debug.Log(Camera.main.ScreenToWorldPoint(new Vector3(0 - Screen.width / 2, Screen.height, 0)));
-    }
 }
