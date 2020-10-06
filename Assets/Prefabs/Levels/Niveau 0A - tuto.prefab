@@ -330,6 +330,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8200195213137924921, guid: 8d43e99d837be204ca08fc1a2dfe22d1, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8200195213137924926, guid: 8d43e99d837be204ca08fc1a2dfe22d1, type: 3}
       propertyPath: m_Name
       value: PNJVeryFirst

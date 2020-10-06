@@ -165,8 +165,9 @@ public class IntroScenario : MonoBehaviour
                 child.gameObject.SetActive(false);
         }
         foreach (Transform child in GameController.GetInstance().player.transform) {
-            if (child.tag == "Flute")
+            if (child.tag == "Flute") {
                 child.gameObject.SetActive(true);
+            }
         }
         timeSinceLastState = 0;
         return State.WAIT_VICTORY_SOUND;

@@ -31,6 +31,7 @@ public class PlayerFlute : MonoBehaviour
         memory = new CircularBuffer<Note>(10);
         memoryDuration = 2;
         timeSinceLastNote = 0;
+        isLocked = true;
     }
 
 

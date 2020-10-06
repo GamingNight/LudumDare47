@@ -39797,7 +39797,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7470903162343275964
 Transform:
   m_ObjectHideFlags: 0
@@ -49744,6 +49744,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PNJRegular1
       objectReference: {fileID: 0}
+    - target: {fileID: 2675722430860918045, guid: 70d4579a01df0d34db70b96873b42bf6, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: faa72beb482576b45af4cfb79b66db6e, type: 3}
+    - target: {fileID: 2675722430860918046, guid: 70d4579a01df0d34db70b96873b42bf6, type: 3}
+      propertyPath: dialogs.Array.data[0]
+      value: 
+      objectReference: {fileID: 4900000, guid: 8affa5e42dec8bb448c494b5e19aa1d4, type: 3}
+    - target: {fileID: 2675722430860918046, guid: 70d4579a01df0d34db70b96873b42bf6, type: 3}
+      propertyPath: dialogs.Array.data[1]
+      value: 
+      objectReference: {fileID: 4900000, guid: 0a62ef401c0695b4cac9d6110a966351, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70d4579a01df0d34db70b96873b42bf6, type: 3}
 --- !u!4 &8677389232771777246 stripped
