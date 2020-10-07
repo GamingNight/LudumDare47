@@ -7,4 +7,5 @@ public class LevelData : MonoBehaviour
     public int id;
     public GameObject previousLevel;
     public GameObject nextLevel;
+    public Color transitionPanelColor;
 }
