@@ -10,35 +10,46 @@ public class FluteListener : MonoBehaviour
 
     private TriggerHighlight triggerHighlight;
     private AbstractFluteListenerScenario scenario;
-    private bool noteFound;
+    private bool sequenceFound;
+    private float waitBufferAfterFound;
+    private float waitTime;
+    private bool scenarioWarned;
 
     private void Start() {
         triggerHighlight = GetComponentInParent<TriggerHighlight>();
         scenario = GetComponent<AbstractFluteListenerScenario>();
-        noteFound = false;
+        sequenceFound = false;
+        waitBufferAfterFound = 1;
+        waitTime = 0;
+        scenarioWarned = false;
     }
 
     private void Update() {
-
-        if (triggerHighlight.IsHighLighted() && !noteFound) {
+        if (triggerHighlight.IsHighLighted() && !sequenceFound) {
             PlayerFlute.Note[] playerNotes = GameController.GetInstance().player.GetComponentInChildren<PlayerFlute>().ReadMemory();
-            noteFound = false;
+            sequenceFound = false;
             int i = 0;
             if (playerNotes.Length >= goodSequence.Length) {
-                while (!noteFound && i < playerNotes.Length) {
+                while (!sequenceFound && i < playerNotes.Length) {
                     int j = 0;
-                    while (j < goodSequence.Length && playerNotes.Length - i >= goodSequence.Length && playerNotes[i + j] == goodSequence[j]) {
+                    while (j < goodSequence.Length
+                            && playerNotes.Length - i >= goodSequence.Length
+                            && (playerNotes[i + j] == goodSequence[j] || goodSequence[j] == PlayerFlute.Note.Whatever)) {
                         j++;
                     }
                     if (j == goodSequence.Length) {
-                        noteFound = true;
+                        sequenceFound = true;
                     } else {
                         i++;
                     }
                 }
-                if (noteFound) {
-                    scenario.InitScenario();
-                }
+            }
+        }
+        if (sequenceFound && !scenarioWarned) {
+            waitTime += Time.deltaTime;
+            if (waitTime >= waitBufferAfterFound) {
+                scenario.InitScenario();
+                scenarioWarned = true;
             }
         }
     }

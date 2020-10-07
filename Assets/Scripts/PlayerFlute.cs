@@ -5,7 +5,7 @@ public class PlayerFlute : MonoBehaviour
 {
     public enum Note
     {
-        None, Lab, Sib, Do, Reb, Mib
+        None, Lab, Sib, Do, Reb, Mib, Whatever
     }
 
     private AudioFade audioFade;

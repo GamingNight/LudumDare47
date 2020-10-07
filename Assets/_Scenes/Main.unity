@@ -389,6 +389,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Niveau 3 - montage
       objectReference: {fileID: 0}
+    - target: {fileID: 8677389232771777233, guid: a3774044389accf40806d1ddfca5a801, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2d4eb2f64619f374e9a11970785716a5, type: 3}
+    - target: {fileID: 8677389232771777240, guid: a3774044389accf40806d1ddfca5a801, type: 3}
+      propertyPath: m_Name
+      value: PNJErmite
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3774044389accf40806d1ddfca5a801, type: 3}
 --- !u!1 &814486228
