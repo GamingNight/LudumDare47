@@ -39833,7 +39833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53aa3e79a6f279c4294e16beeb5ad542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 3
   previousLevel: {fileID: 0}
   nextLevel: {fileID: 0}
 --- !u!1 &7530921066896788387
@@ -49742,12 +49742,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2675722430860918036, guid: 70d4579a01df0d34db70b96873b42bf6, type: 3}
       propertyPath: m_Name
-      value: PNJRegular1
+      value: PNJErmite
       objectReference: {fileID: 0}
     - target: {fileID: 2675722430860918045, guid: 70d4579a01df0d34db70b96873b42bf6, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: faa72beb482576b45af4cfb79b66db6e, type: 3}
+      objectReference: {fileID: 8300000, guid: 2d4eb2f64619f374e9a11970785716a5, type: 3}
     - target: {fileID: 2675722430860918046, guid: 70d4579a01df0d34db70b96873b42bf6, type: 3}
       propertyPath: dialogs.Array.data[0]
       value: 
