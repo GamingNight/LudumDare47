@@ -39494,7 +39494,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2163537653335961514
 Transform:
   m_ObjectHideFlags: 0
@@ -39530,7 +39530,7 @@ MonoBehaviour:
   id: 1
   previousLevel: {fileID: 0}
   nextLevel: {fileID: 0}
-  transitionPanelColor: {r: 0, g: 0, b: 0, a: 0}
+  transitionPanelColor: {r: 1, g: 1, b: 0, a: 1}
 --- !u!1 &2163537653588420150
 GameObject:
   m_ObjectHideFlags: 0
@@ -39813,6 +39813,45 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!61 &2052005954
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5693278894821700418}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.06666667}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.17333333, y: 0.13333334}
+    newSize: {x: 0.17333333, y: 0.13333334}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 0.55}
+  m_EdgeRadius: 0
+--- !u!114 &2052005953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5693278894821700418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc6834e465c55346821df8e315ff0b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightObject: {fileID: 0}
 --- !u!1 &6444248974371128272
 GameObject:
   m_ObjectHideFlags: 0
@@ -40414,6 +40453,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b525d5a1608e8074597cb0e8d0d554a2, type: 3}
+--- !u!1 &5693278894821700418 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8462181880884154239, guid: b525d5a1608e8074597cb0e8d0d554a2, type: 3}
+  m_PrefabInstance: {fileID: 4210060171810683965}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5693278894821700429 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8462181880884154224, guid: b525d5a1608e8074597cb0e8d0d554a2, type: 3}

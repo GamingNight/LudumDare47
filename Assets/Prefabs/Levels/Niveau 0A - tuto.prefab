@@ -409,7 +409,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7724037254426503228
 Transform:
   m_ObjectHideFlags: 0
@@ -443,7 +443,7 @@ MonoBehaviour:
   id: 0
   previousLevel: {fileID: 0}
   nextLevel: {fileID: 0}
-  transitionPanelColor: {r: 0, g: 0, b: 0, a: 0}
+  transitionPanelColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1001 &1637432470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -640,6 +640,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7724037254426503228}
     m_Modifications:
+    - target: {fileID: 6120076635462868535, guid: 8d43e99d837be204ca08fc1a2dfe22d1, type: 3}
+      propertyPath: m_Volume
+      value: 0.627
+      objectReference: {fileID: 0}
     - target: {fileID: 8200195213137924920, guid: 8d43e99d837be204ca08fc1a2dfe22d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.43
