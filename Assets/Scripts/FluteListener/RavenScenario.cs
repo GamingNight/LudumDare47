@@ -21,6 +21,7 @@ public class RavenScenario : AbstractFluteListenerScenario
 
     public override void InitScenario() {
         currentState = State.WAIT_BEFORE_FLY;
+        GetComponent<AudioSource>().Stop();
     }
 
     protected override void RunScenario() {
@@ -31,7 +32,6 @@ public class RavenScenario : AbstractFluteListenerScenario
                 currentState = State.FLY;
             }
         } else if (currentState == State.FLY) {
-            GetComponent<AudioSource>().Stop();
             GetComponent<Animator>().SetBool("succeed", true);
             timeSinceLastWait = 0;
             currentState = State.NONE;
