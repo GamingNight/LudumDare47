@@ -443,6 +443,7 @@ MonoBehaviour:
   id: 0
   previousLevel: {fileID: 0}
   nextLevel: {fileID: 0}
+  transitionPanelColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1001 &1637432470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -522,6 +523,10 @@ PrefabInstance:
       propertyPath: Loop
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2675722430860918045, guid: 70d4579a01df0d34db70b96873b42bf6, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 2478db3f4b2ab8148bcbf90fc2cc24aa, type: 2}
     - target: {fileID: 2675722430860918046, guid: 70d4579a01df0d34db70b96873b42bf6, type: 3}
       propertyPath: dialogs.Array.data[0]
       value: 
@@ -560,6 +565,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7724037254426503228}
     m_Modifications:
+    - target: {fileID: 1100804268545596864, guid: a8050d6f33ec4804cacde8122ded99ae, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 2478db3f4b2ab8148bcbf90fc2cc24aa, type: 2}
     - target: {fileID: 4068143257792970715, guid: a8050d6f33ec4804cacde8122ded99ae, type: 3}
       propertyPath: m_Name
       value: ' Niveau 0 - base'
@@ -607,6 +616,10 @@ PrefabInstance:
     - target: {fileID: 5407403801609416186, guid: a8050d6f33ec4804cacde8122ded99ae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611290356515237871, guid: a8050d6f33ec4804cacde8122ded99ae, type: 3}
+      propertyPath: m_Intensity
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8050d6f33ec4804cacde8122ded99ae, type: 3}
@@ -671,17 +684,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8200195213137924921, guid: 8d43e99d837be204ca08fc1a2dfe22d1, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8200195213137924926, guid: 8d43e99d837be204ca08fc1a2dfe22d1, type: 3}
       propertyPath: m_Name
       value: PNJVeryFirst
-      objectReference: {fileID: 0}
-    - target: {fileID: 8200195213137924926, guid: 8d43e99d837be204ca08fc1a2dfe22d1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d43e99d837be204ca08fc1a2dfe22d1, type: 3}

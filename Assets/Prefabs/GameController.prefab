@@ -492,6 +492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7592726446448514490}
   - component: {fileID: 7592726446448514491}
+  - component: {fileID: 6354887561310374206}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -534,3 +535,15 @@ MonoBehaviour:
   dialogPanel: {fileID: 1567964762}
   dialogSpeed: 20
   nextLevelTrigger: {fileID: 0}
+--- !u!114 &6354887561310374206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7592726446448514489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b539991851474146bbb1fb956bd10c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

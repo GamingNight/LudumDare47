@@ -477,6 +477,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.097
       objectReference: {fileID: 0}
+    - target: {fileID: 1116859716735830364, guid: a3774044389accf40806d1ddfca5a801, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116859716735830364, guid: a3774044389accf40806d1ddfca5a801, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 2478db3f4b2ab8148bcbf90fc2cc24aa, type: 2}
     - target: {fileID: 2412927004551892210, guid: a3774044389accf40806d1ddfca5a801, type: 3}
       propertyPath: m_LocalPosition.y
       value: 7.38
@@ -513,6 +521,14 @@ PrefabInstance:
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 2885165023016771950, guid: a3774044389accf40806d1ddfca5a801, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2885165023016771950, guid: a3774044389accf40806d1ddfca5a801, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 2478db3f4b2ab8148bcbf90fc2cc24aa, type: 2}
     - target: {fileID: 3865796493806466560, guid: a3774044389accf40806d1ddfca5a801, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.091
@@ -750,6 +766,10 @@ PrefabInstance:
       propertyPath: MaxDistance
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 7912933865855451879, guid: 368b9a488b61adf4399b5cc0e57dbfe1, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 2478db3f4b2ab8148bcbf90fc2cc24aa, type: 2}
     - target: {fileID: 8784305785774770577, guid: 368b9a488b61adf4399b5cc0e57dbfe1, type: 3}
       propertyPath: m_Volume
       value: 0.237
@@ -783,7 +803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2459444248949073157, guid: 2649eca50fb0b0b49b60431774d06c42, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2459444248949073158, guid: 2649eca50fb0b0b49b60431774d06c42, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1193,7 +1213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2163537653335961513, guid: 75ed7b3461ebc3043ae662d51c6d4588, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2163537653335961514, guid: 75ed7b3461ebc3043ae662d51c6d4588, type: 3}
       propertyPath: m_LocalPosition.x
