@@ -19,6 +19,7 @@ public class PauseScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) {
             background.SetActive(!background.activeSelf);
             pausePanel.SetActive(!pausePanel.activeSelf);
+            GameController.GetInstance().player.GetComponent<PlayerController>().enabled = !GameController.GetInstance().player.GetComponent<PlayerController>().enabled;
             pauseIsActive = !pauseIsActive;
         }
 
